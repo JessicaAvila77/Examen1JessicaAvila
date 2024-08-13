@@ -10,6 +10,7 @@ namespace Examen1JessicaAvila
     {
         static void Main(string[] args)
         {
+            
             Asignatura asignatura = new Asignatura();
 
             Console.WriteLine("");
@@ -28,14 +29,43 @@ namespace Examen1JessicaAvila
             asignatura.NombreDocente = Console.ReadLine();
             Console.WriteLine("");
             Console.Write("Ingrese nota primer parcial:");
-            asignatura.N1 = Convert.ToInt32(Console.ReadLine());
+            bool validN1 = int.TryParse(Console.ReadLine(), out asignatura.N1);
             Console.Write("Ingrese nota segundo parcial:");
-            asignatura.N2 = Convert.ToInt32(Console.ReadLine());
+            bool validN2 = int.TryParse(Console.ReadLine(), out asignatura.N2);
             Console.Write("Ingrese nota tercer parcial:");
-            asignatura.N3 = Convert.ToInt32(Console.ReadLine());
+            bool validN3 = int.TryParse(Console.ReadLine(), out asignatura.N3);
 
-            //asignatura.CalcularNotaFinal();
-            asignatura.Imprimir();
+            //validando tipo de datos y validando numeros enteros
+            if (validN1 && validN2 && validN3)
+            {
+                if ((asignatura.N1 >= 0 && asignatura.N1<=30) && (asignatura.N2 >= 0 && asignatura.N2 <= 30) && (asignatura.N3 >= 0 && asignatura.N3 <= 40))
+                {
+                    asignatura.Imprimir();
+                }
+                else if (asignatura.N1 > 30 || asignatura.N2 > 30)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("La nota del primer o el segundo parcial sobrepasan del 30%");
+
+                }else if (asignatura.N3 > 40)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("La nota del tercer parcial sobrepasa del 40%");
+                }
+                else
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Una nota es menor que cero");
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Uno de las notas no tiene el formato correcto...");
+            }
+
+           
 
         }
     }
