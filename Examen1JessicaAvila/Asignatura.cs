@@ -22,7 +22,7 @@ namespace Examen1JessicaAvila
 
         public double CalcularNotaFinal()
         {
-            //return N1+N2+N3;
+            
             return CalcularNotaFinal(N1,N2,N3);
         }
 
@@ -38,44 +38,46 @@ namespace Examen1JessicaAvila
 
         public string MensajeNotaFinal(double notaFinal)
         {
-            Console.Write($"Nota final: {notaFinal}");
+            Console.Write($"Nota final: % {notaFinal}");
 
             if (notaFinal >= 0 && notaFinal <= 59)
             {
-                Console.WriteLine("- Reprobado");
+                Console.WriteLine(" - Reprobado");
             }
             if (notaFinal >= 60 && notaFinal <= 70)
             {
-                Console.WriteLine("- Bueno");
+                Console.WriteLine(" - Bueno");
             }
             if (notaFinal >= 80 && notaFinal <= 89)
             {
-                Console.WriteLine("- Muy Bueno");
+                Console.WriteLine(" - Muy Bueno");
             }
             if (notaFinal >= 90 && notaFinal <= 100)
             {
-                Console.WriteLine("- Sobresaliente");
+                Console.WriteLine(" - Sobresaliente");
             }
 
            
-            return "Nota no valida";
+            return "";
         }
 
         
 
         public void Imprimir()
         {
-            Console.Write($"Nombre del estudiante: {NombreAlumno}");
-            Console.Write($"Numero de cuenta: {NumeroCuenta}");
-            Console.Write($"Correo electronico: {Email}");
-            Console.Write($"Nombre de la clase: {NombreAsignatura}");
-            Console.Write($"Horario: {Horario}");
-            Console.Write($"Nombre del docente: {NombreDocente}");
-            Console.Write($"Nota final: {CalcularNotaFinal()}");
+            Console.WriteLine("");
+            Console.WriteLine("=====================================================");
+            Console.WriteLine($"Nombre del estudiante: {NombreAlumno}");
+            Console.WriteLine($"Numero de cuenta: {NumeroCuenta}");
+            Console.WriteLine($"Correo electronico: {Email}");
+            Console.WriteLine($"Nombre de la clase: {NombreAsignatura}");
+            Console.WriteLine($"Horario: {Horario}");
+            Console.WriteLine($"Nombre del docente: {NombreDocente}");
+           // Console.WriteLine($"Nota final: {CalcularNotaFinal()}");
 
             double Notafinal = CalcularNotaFinal();
-            Console.Write($"Nota final: {MensajeNotaFinal(Notafinal)}");
-
+            Console.WriteLine($"Nota final: {MensajeNotaFinal(Notafinal)}");
+            Console.WriteLine("=====================================================");
 
         }
 
