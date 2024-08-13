@@ -18,8 +18,7 @@ namespace Examen1JessicaAvila
         public string NombreDocente { get; set; }
 
         public Asignatura() { } 
-
-        
+       
 
         public double CalcularNotaFinal()
         {
@@ -32,7 +31,6 @@ namespace Examen1JessicaAvila
         {
             double notafinal = n1 + n2 + n3;
 
-
             MensajeNotaFinal(notafinal);
 
             return notafinal;
@@ -40,20 +38,44 @@ namespace Examen1JessicaAvila
 
         public string MensajeNotaFinal(double notaFinal)
         {
+            Console.Write($"Nota final: {notaFinal}");
+
             if (notaFinal >= 0 && notaFinal <= 59)
             {
-                Console.WriteLine("Reprobado");
+                Console.WriteLine("- Reprobado");
             }
             if (notaFinal >= 60 && notaFinal <= 70)
             {
-                Console.WriteLine("Reprobado");
+                Console.WriteLine("- Bueno");
+            }
+            if (notaFinal >= 80 && notaFinal <= 89)
+            {
+                Console.WriteLine("- Muy Bueno");
+            }
+            if (notaFinal >= 90 && notaFinal <= 100)
+            {
+                Console.WriteLine("- Sobresaliente");
             }
 
-            return string.Empty;
+           
+            return "Nota no valida";
         }
+
+        
 
         public void Imprimir()
         {
+            Console.Write($"Nombre del estudiante: {NombreAlumno}");
+            Console.Write($"Numero de cuenta: {NumeroCuenta}");
+            Console.Write($"Correo electronico: {Email}");
+            Console.Write($"Nombre de la clase: {NombreAsignatura}");
+            Console.Write($"Horario: {Horario}");
+            Console.Write($"Nombre del docente: {NombreDocente}");
+            Console.Write($"Nota final: {CalcularNotaFinal()}");
+
+            double Notafinal = CalcularNotaFinal();
+            Console.Write($"Nota final: {MensajeNotaFinal(Notafinal)}");
+
 
         }
 

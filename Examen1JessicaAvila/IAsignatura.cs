@@ -19,7 +19,7 @@ namespace Examen1JessicaAvila
         string MensajeNotaFinal(double notaFinal);
 
         //Mostrar en pantalla los datos del alumno, la asignatura y la nota final
-        void Imprmir();
+        void Imprimir();
 
     }
 }

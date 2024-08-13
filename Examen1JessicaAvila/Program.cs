@@ -10,6 +10,26 @@ namespace Examen1JessicaAvila
     {
         static void Main(string[] args)
         {
+            Asignatura asignatura = new Asignatura();
+
+            Console.WriteLine("");
+            Console.WriteLine("==============");
+            Console.Write("Ingrese nombre del alumno:");
+            asignatura.NombreAlumno = Console.ReadLine();
+            Console.Write("Ingrese numero de cuenta:");
+            asignatura.NumeroCuenta = Console.ReadLine();
+            Console.Write("Ingrese correo electrónico:");
+            asignatura.Email = Console.ReadLine();
+            Console.Write("Ingrese nombre de la clase:");
+            asignatura.NombreAsignatura = Console.ReadLine();
+            Console.Write("Ingrese horario de clase:");
+            asignatura.Horario = Console.ReadLine();
+            Console.Write("Ingrese nombre del docente:");
+            asignatura.NombreDocente = Console.ReadLine();
+            Console.Write("Ingrese nota primer parcial:");
+            asignatura.N1 = Convert.ToInt32(Console.ReadLine());
+
+
         }
     }
 }
