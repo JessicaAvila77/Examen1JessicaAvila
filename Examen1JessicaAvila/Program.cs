@@ -55,14 +55,14 @@ namespace Examen1JessicaAvila
                 else
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Una nota es menor que cero");
+                    Console.WriteLine("Una nota es menor que cero...");
 
                 }
             }
             else
             {
                 Console.WriteLine("");
-                Console.WriteLine("Uno de las notas no tiene el formato correcto...");
+                Console.WriteLine("Uno de las notas no tiene el formato válido...");
             }
 
            
