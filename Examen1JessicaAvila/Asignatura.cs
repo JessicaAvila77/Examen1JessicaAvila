@@ -38,13 +38,13 @@ namespace Examen1JessicaAvila
 
         public string MensajeNotaFinal(double notaFinal)
         {
-            Console.Write($"Nota final: % {notaFinal}");
+            Console.Write($"Nota final:  {notaFinal}%");
 
             if (notaFinal >= 0 && notaFinal <= 59)
             {
                 Console.WriteLine(" - Reprobado");
             }
-            if (notaFinal >= 60 && notaFinal <= 70)
+            if (notaFinal >= 60 && notaFinal <= 79)
             {
                 Console.WriteLine(" - Bueno");
             }

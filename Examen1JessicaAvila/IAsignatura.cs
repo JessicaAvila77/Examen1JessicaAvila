@@ -8,7 +8,7 @@ namespace Examen1JessicaAvila
 {
     public interface IAsignatura
     {
-        //este metodo sumara las 3 notas parciales y retorna la nota final
+        //este metodo sumara las 3 notas parciales y retorna la nota final, esta version no me permite agregar el public.
         double CalcularNotaFinal();
 
 
